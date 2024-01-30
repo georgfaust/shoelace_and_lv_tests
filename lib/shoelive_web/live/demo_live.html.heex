@@ -1,1 +1,110 @@
-test
+<div class="flex flex-col gap-8">
+  <div class="text-neutral-500 text-xs">counter: <%= @counter %></div>
+  <div>
+    <sl-button phx-click="inc">no defaults set</sl-button>
+    <sl-button phx-click="inc" variant="primary" size="medium">defaults set</sl-button>
+  </div>
+
+  <div>
+    <div class="text-red-500">
+      LV removes the separators from the sl-breadcrumb-item separator slots!
+    </div>
+    <sl-breadcrumb>
+      <sl-icon name="arrow-right" slot="separator" aria-hidden="true"></sl-icon>
+      <sl-breadcrumb-item>
+        <sl-icon slot="prefix" name="house"></sl-icon>First
+      </sl-breadcrumb-item>
+      <sl-breadcrumb-item>Second</sl-breadcrumb-item>
+      <sl-breadcrumb-item>Third</sl-breadcrumb-item>
+    </sl-breadcrumb>
+  </div>
+
+  <div>
+    <div class="text-red-500">LV removes the classes from the sl-buttons!</div>
+    <sl-button-group label="Alignment">
+      <sl-button size="small">Left</sl-button>
+      <sl-button size="small">Center</sl-button>
+      <sl-button size="small">Right</sl-button>
+    </sl-button-group>
+  </div>
+
+  <div>
+    <sl-details summary="Toggle Me">
+      Lorem ipsum  ...
+    </sl-details>
+  </div>
+
+  <div>
+    <sl-avatar initials="LV" label="no shape set"></sl-avatar>
+    <sl-avatar initials="LV" shape="circle" label="no shape set"></sl-avatar>
+  </div>
+
+  <div>
+    <sl-button>
+      Requests
+      <sl-badge pill>30</sl-badge>
+    </sl-button>
+
+    <sl-button style="margin-inline-start: 1rem;">
+      Warnings
+      <sl-badge variant="warning" pill>8</sl-badge>
+    </sl-button>
+  </div>
+
+  <div>
+    <sl-card class="card-overview w-72">
+      <img
+        slot="image"
+        src="https://images.unsplash.com/photo-1559209172-0ff8f6d49ff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+        alt="A kitten sits patiently between a terracotta pot and decorative grasses."
+      />
+
+      <strong>Mittens</strong>
+      <br /> This kitten is as cute as he is playful. Bring him home today!<br />
+      <small class="text-neutral-500">6 weeks old</small>
+
+      <div slot="footer" class="flex justify-between items-center">
+        <sl-button variant="primary" pill>More Info</sl-button>
+        <sl-rating></sl-rating>
+      </div>
+    </sl-card>
+  </div>
+
+  <div>
+    <div class="text-orange-500">
+      the carousel has has the same glitch on the shoelace demo page
+    </div>
+    <sl-carousel pagination navigation mouse-dragging loop>
+      <sl-carousel-item>
+        <img
+          alt="The sun shines on the mountains and trees (by Adam Kool on Unsplash)"
+          src="/images/mountains.jpg"
+        />
+      </sl-carousel-item>
+      <sl-carousel-item>
+        <img
+          alt="A waterfall in the middle of a forest (by Thomas Kelly on Unsplash)"
+          src="/images/waterfall.jpg"
+        />
+      </sl-carousel-item>
+      <sl-carousel-item>
+        <img
+          alt="The sun is setting over a lavender field (by Leonard Cotte on Unsplash)"
+          src="/images/sunset.jpg"
+        />
+      </sl-carousel-item>
+      <sl-carousel-item>
+        <img
+          alt="A field of grass with the sun setting in the background (by Sapan Patel on Unsplash)"
+          src="/images/field.jpg"
+        />
+      </sl-carousel-item>
+      <sl-carousel-item>
+        <img
+          alt="A scenic view of a mountain with clouds rolling in (by V2osk on Unsplash)"
+          src="/images/valley.jpg"
+        />
+      </sl-carousel-item>
+    </sl-carousel>
+  </div>
+</div>

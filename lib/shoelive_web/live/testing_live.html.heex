@@ -1,0 +1,7 @@
+<div class="text-neutral-500 text-xs">counter: <%= @counter %></div>
+<div>
+  <sl-button phx-click="inc">no defaults set</sl-button>
+  <sl-button phx-click="inc" variant="primary" size="medium">defaults set</sl-button>
+</div>
+
+<p data-counter={@counter} class="mt-8">I have counter in @data-counter</p>

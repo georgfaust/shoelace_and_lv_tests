@@ -14,5 +14,6 @@ defmodule ShoeliveWeb.Router do
     pipe_through :browser
 
     live "/", DemoLive
+    live "/testing", TestingLive
   end
 end
